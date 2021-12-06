@@ -8,10 +8,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - run: npm install
-    - name: Test & build
-    - run: npm test
-    - run: npm build
+    - name: Install
+    - uses: Adzz/jest_test_action@v1.0.0
+      with:
+        command: npm install
+    - name: Test
+    - uses: Adzz/jest_test_action@v1.0.0
+      with:
+        command: npm test
+    - name: Build
+    - uses: Adzz/jest_test_action@v1.0.0
+      with:
+        command: npm build
     - name: Archive Release
       uses: thedoctor0/zip-release@master
       with:
