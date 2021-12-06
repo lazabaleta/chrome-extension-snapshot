@@ -13,7 +13,7 @@ jobs:
     - name: Test release
       run: npm test
     - name: Build release
-      run: npm build
+      run: npm run build
     - name: Archive Release
       uses: thedoctor0/zip-release@master
       with:
