@@ -8,20 +8,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Install
+    - name: Archive Release
       uses: Adzz/jest_test_action@v1.0.0
       with:
         command: npm install
-    - name: Test
-      uses: Adzz/jest_test_action@v1.0.0
+    - uses: Adzz/jest_test_action@v1.0.0
       with:
         command: npm test
-    - name: Build
-      uses: Adzz/jest_test_action@v1.0.0
+    - uses: Adzz/jest_test_action@v1.0.0
       with:
         command: npm build
-    - name: Archive Release
-      uses: thedoctor0/zip-release@master
+    - uses: thedoctor0/zip-release@master
       with:
         type: 'zip'
         path: './dist/'
