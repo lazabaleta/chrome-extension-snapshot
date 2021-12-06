@@ -11,12 +11,15 @@ jobs:
     - name: Archive Release
       uses: Adzz/jest_test_action@v1.0.0
       with:
+        package-manager: npm
         command: npm install
     - uses: Adzz/jest_test_action@v1.0.0
       with:
+        package-manager: npm
         command: npm test
     - uses: Adzz/jest_test_action@v1.0.0
       with:
+        package-manager: npm
         command: npm build
     - uses: thedoctor0/zip-release@master
       with:
