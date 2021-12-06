@@ -1,0 +1,25 @@
+{
+    "name": "Snapshot",
+    "description": "Chrome extension to create page snapshots",
+    "version": "1.0.0",
+    "icons": {
+      "16": "/camera-retro-16-16.png",
+      "32": "/camera-retro-32-32.png",
+      "48": "/camera-retro-48-48.png",
+      "128": "/camera-retro-128-128.png"
+    },
+    "manifest_version": 3,
+    "permissions": ["activeTab"],
+    "action": {
+      "default_title": "Take a snapshot",
+      "default_icon": {
+        "16": "/camera-retro-16-16.png",
+        "32": "/camera-retro-32-32.png",
+        "48": "/camera-retro-48-48.png",
+        "128": "/camera-retro-128-128.png"
+      }
+    },
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
