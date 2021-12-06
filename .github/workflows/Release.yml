@@ -9,15 +9,15 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Install
-    - uses: Adzz/jest_test_action@v1.0.0
+      uses: Adzz/jest_test_action@v1.0.0
       with:
         command: npm install
     - name: Test
-    - uses: Adzz/jest_test_action@v1.0.0
+      uses: Adzz/jest_test_action@v1.0.0
       with:
         command: npm test
     - name: Build
-    - uses: Adzz/jest_test_action@v1.0.0
+      uses: Adzz/jest_test_action@v1.0.0
       with:
         command: npm build
     - name: Archive Release
