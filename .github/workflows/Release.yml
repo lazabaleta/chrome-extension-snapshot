@@ -9,18 +9,12 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Archive Release
-      uses: Adzz/jest_test_action@v1.0.0
+    - uses: actions/setup-node@v2
       with:
-        package-manager: npm
-        command: install
-    - uses: Adzz/jest_test_action@v1.0.0
-      with:
-        package-manager: npm
-        command: test
-    - uses: Adzz/jest_test_action@v1.0.0
-      with:
-        package-manager: npm
-        command: run-script build
+          node-version: '14'
+    - run: npm install
+    - run: npm test
+    - run: build
     - uses: thedoctor0/zip-release@master
       with:
         type: 'zip'
