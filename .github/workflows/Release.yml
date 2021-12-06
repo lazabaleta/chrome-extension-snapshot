@@ -19,8 +19,8 @@ jobs:
       with:
         type: 'zip'
         path: './dist/'
-        filename: chrome-extension-snapshot-${{ github.run_number }}.zip
+        filename: chrome-extension-snapshot-v1.0.0.zip
     - uses: ncipollo/release-action@v1
       with:
-        artifacts: chrome-extension-snapshot-${{ github.run_number }}.zip
+        artifacts: chrome-extension-snapshot-v1.0.0.zip
         token: ${{ secrets.GITHUB_TOKEN }}
